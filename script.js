@@ -18,6 +18,6 @@ console.log(document.querySelector('.guess').value);
 // select el .guess and add function click and print to console
 document.querySelector('.check').addEventListener('click', function () {
   // save value into variable guess
-  const guess = document.querySelector('.guess').value;
+  const guess = Number(document.querySelector('.guess').value);
   console.log(typeof guess);
 });
