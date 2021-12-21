@@ -16,8 +16,8 @@ console.log(document.querySelector('.guess').value);
 */
 
 // Random number between 0 and 20
-const number = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = number;
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
+document.querySelector('.number').textContent = secretNumber;
 
 // select el .guess and add function click and print to console
 document.querySelector('.check').addEventListener('click', function () {
@@ -28,5 +28,7 @@ document.querySelector('.check').addEventListener('click', function () {
   // if no input number
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No number!';
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = '🎉 Correct Number!';
   }
 });
