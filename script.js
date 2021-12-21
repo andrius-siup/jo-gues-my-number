@@ -19,5 +19,10 @@ console.log(document.querySelector('.guess').value);
 document.querySelector('.check').addEventListener('click', function () {
   // save value into variable guess
   const guess = Number(document.querySelector('.guess').value);
-  console.log(typeof guess);
+  console.log(guess, typeof guess);
+
+  // if no input number
+  if (!guess) {
+    document.querySelector('.message').textContent = '⛔ No number!';
+  }
 });
