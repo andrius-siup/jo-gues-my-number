@@ -15,6 +15,10 @@ document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 */
 
+// Random number between 0 and 20
+const number = Math.trunc(Math.random() * 20) + 1;
+document.querySelector('.number').textContent = number;
+
 // select el .guess and add function click and print to console
 document.querySelector('.check').addEventListener('click', function () {
   // save value into variable guess
