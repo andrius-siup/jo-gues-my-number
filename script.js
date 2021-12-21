@@ -17,6 +17,7 @@ console.log(document.querySelector('.guess').value);
 
 // Random number between 0 and 20
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
 document.querySelector('.number').textContent = secretNumber;
 
 // select el .guess and add function click and print to console
@@ -32,7 +33,11 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
   } else if (guess > secretNumber) {
     document.querySelector('.message').textContent = '👇 Too High!';
+    score--; 
+    document.querySelector('.score').textContent = score;
   } else if (guess < secretNumber) {
     document.querySelector('.message').textContent = '👆 Too Low!';
+    score--;
+    document.querySelector('.score').textContent = score;
   }
 });
