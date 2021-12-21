@@ -14,6 +14,10 @@ document.querySelector('.score').textContent = 10;
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 */
+
+// select el .guess and add function click and print to console
 document.querySelector('.check').addEventListener('click', function () {
-  console.log(document.querySelector('.guess').value);
-})
+  // save value into variable guess
+  const guess = document.querySelector('.guess').value;
+  console.log(typeof guess);
+});
